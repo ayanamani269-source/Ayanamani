@@ -1,0 +1,33 @@
+import java.util.LinkedList;
+public class FlowerLinkedList {
+    public static void main(String[] args) {
+        // Create a LinkedList of flower names
+        LinkedList<String> flowers = new LinkedList<>();
+        // Add flower names
+        flowers.add("Rose");
+        flowers.add("Lily");
+        flowers.add("Tulip");
+        flowers.add("Sunflower");
+        flowers.add("Jasmine");
+
+        System.out.println("Flower List: " + flowers);
+        // Remove a flower
+        flowers.remove("Tulip");
+        System.out.println("After removing Tulip: " + flowers);
+        // Search for a flower
+        String searchFlower = "Lily";
+        if (flowers.contains(searchFlower)) {
+            System.out.println(searchFlower + " is in the list.");
+        } else {
+            System.out.println(searchFlower + " is not in the list.");
+        }
+        // Retrieve an element by index
+        String firstFlower = flowers.get(0);
+        System.out.println("First flower in the list: " + firstFlower);
+        // Iterate over the list
+        System.out.println("Iterating through the list:");
+        for (String flower : flowers) {
+            System.out.println(flower);
+        }
+    }
+}
